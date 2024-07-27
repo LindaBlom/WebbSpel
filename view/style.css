@@ -46,13 +46,13 @@ header {
     overflow-y: auto;
     /*flex-grow: 1;*/
     margin-top: 150px;
-    height: 30vh;
+    height: 50vh;
     display: flex;
     flex-direction: column; /*bubbles stack vertically*/
 }
 
 .chat-bubble {
-    max-width: 90%;
+    max-width: 65%;
     padding: 10px 15px;
     margin: 10px 0;
     border-radius: 20px;
@@ -76,30 +76,19 @@ header {
     display: flex;
     justify-content: center;
     padding: 10px;
-    background-color: #444;
+    background-color: #1c1b1b;
     position: fixed;
     bottom: 0;
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.text-input {
-    width: 100%;
-    max-width: 500px;
-    padding: 10px;
-    border-radius: 20px;
-    border: none;
-    background-color: #151515;
-    color: #454242;
-    margin-right: 10px;
-}
-
-
-
 
 .button-container {
+    background-color: #1c1b1b;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    flex-direction: column;
     gap: 2px; /* Add some gap between buttons */
 }
 
