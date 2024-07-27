@@ -21,7 +21,7 @@ header {
     justify-content: center; /*denna var bra*/
 }
 
-.profile-picture {
+.picture {
     width: 80px;
     display: flex;
     height: 80px;
