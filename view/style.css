@@ -37,20 +37,22 @@ header {
 }
 .chat-container {
     margin-top: 80px;
-    width: 300%;
-    max-width: 500px;
+    width: 100%;
+    max-width: 2000px;
     padding: 20px;
     background-color: #1c1b1b;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
-    flex-grow: 1;
+    /*flex-grow: 1;*/
     margin-top: 150px;
     height: 30vh;
+    display: flex;
+    flex-direction: column; /*bubbles stack vertically*/
 }
 
 .chat-bubble {
-    max-width: 70%;
+    max-width: 90%;
     padding: 10px 15px;
     margin: 10px 0;
     border-radius: 20px;
@@ -90,4 +92,35 @@ header {
     color: #454242;
     margin-right: 10px;
 }
+
+
+
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2px; /* Add some gap between buttons */
+}
+
+
+button {
+    background-color: #4CAF50; /* Green background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 15px 32px; /* Add some padding */
+    text-align: center; /* Center the text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make the buttons inline elements */
+    font-size: 16px; /* Increase font size */
+    margin: 4px 2px; /* Add some margin */
+    cursor: pointer; /* Add a pointer cursor on hover */
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Add some hover effects for buttons */
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
 
