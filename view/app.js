@@ -1,4 +1,5 @@
-import { addChatMessage,addMessagesSequentially } from './modules.js';
+import {addMessagesSequentially, addAnswers } from './modules.js';
+import { firstMessages, firstAnswers } from '../controller/messageController.js';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -6,9 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     const chatContainer = document.querySelector('.chat-container');
+    addMessagesSequentially(firstMessages, chatContainer, 2000);
 
-    addMessagesSequentially(['Heej! är du upptagen? :D', 'Hallå svara!!!', 'Svara dååå!'], chatContainer, 2000);
-
+    const buttonContainer = document.querySelector('.button-container');
+    addAnswers(firstAnswers, buttonContainer);
 
 
     // EventListner för knappar
