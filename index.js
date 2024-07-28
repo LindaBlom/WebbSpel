@@ -1,6 +1,7 @@
 
 
 //skicka requests till webbservern
+//hanterar kommunikation mellan server och klient
 
 const express = require('express');
 const { readFile } = require('fs').promises;
@@ -12,7 +13,8 @@ const path = require('path');
 app.use(express.static(path.join(__dirname, 'view')));
 
 
-app.get('/', async (req, response) => {
+// express läser in html filen till websidan
+app.get('/', async (request, response) => {
     response.send( await readFile('view/index.html', 'utf8'));
 });
 

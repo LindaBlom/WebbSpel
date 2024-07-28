@@ -1,24 +1,13 @@
+import { addChatMessage,addMessagesSequentially } from './modules.js';
+
+
 document.addEventListener('DOMContentLoaded', () => {
     console.log('script is running');
 
 
     const chatContainer = document.querySelector('.chat-container');
-    
-    function addChatMessage(message,chatContainer) {
-        const newBubble = document.createElement('div');
-        newBubble.className = 'chat-bubble';
-        newBubble.textContent = message;
-        chatContainer.appendChild(newBubble);
-        // Scroll the new message into view
-        newBubble.scrollIntoView({ behavior: 'smooth' });
-    }
 
-    addChatMessage('Hello World!', chatContainer);
-    addChatMessage('Testar bara lite grejjor hihi', chatContainer);
-
-
-
-
+    addMessagesSequentially(['Heej! är du upptagen? :D', 'Hallå svara!!!', 'Svara dååå!'], chatContainer, 2000);
 
 
 
@@ -33,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
      else {
-        console.error('Button not found');
+        console.error('Buttons not found');
     }}
 
 
